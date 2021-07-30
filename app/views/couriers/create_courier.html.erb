@@ -1,0 +1,17 @@
+<div class="card-body">
+  <small>
+    | <%= courier.created_at&.strftime('%D')  %>
+  </small>
+
+  <p class="card-text">
+    <%= courier.name %>
+    <%= courier.email %>
+
+    <%= form_for ([courier, courier.build]) do |f| %>     
+      <p>
+        <%= f.button :create, type: :submit, class: 'btn btn-info' %>
+      </p>
+      
+    <% end %>
+  </p>
+</div>
