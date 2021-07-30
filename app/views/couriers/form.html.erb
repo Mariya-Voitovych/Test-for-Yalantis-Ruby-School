@@ -1,0 +1,11 @@
+<h4>Create package</h4>
+<%= form_with(model: courier.packages.build, url: packages_path) do |form| %>
+  <h5>Tracking number</h5>  
+  <%= form.text_area :tracking_number, class: 'form-control', rows: 3 %>
+  <h5>Delivery status</h5>
+  <%= form.text_area :delivery_status, class: 'form-control', rows: 3 %>
+
+  <div class="d-flex justify-content-end mt-2">
+    <%= form.button :package, type: :submit, class: 'btn btn-info' %>
+  </div>
+<% end %>
